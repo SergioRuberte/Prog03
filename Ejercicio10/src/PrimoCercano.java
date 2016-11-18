@@ -4,34 +4,36 @@ public class PrimoCercano {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner teclado=new Scanner (System.in);
-		int a=0, i, n, n1, n2;
-		int contx=0, conty=0;
-		System.out.println("Ingrese número:");
-		n=teclado.nextInt();
-		
-		for(i=n; i<=n; i--) {
-			if(n%i==0){
-				System.out.println(i);
-				a++;
-				contx++;
+		int x, nprimo,cdiv=0;
+		boolean esprimo;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Dame el numero para empezar a probar: ");
+		nprimo=teclado.nextInt();
+		nprimo++;
+		do
+		{
+			cdiv=0;
+			esprimo=false;
+// esprimo vale false cuando no lo encuentro y true cuando si
+			for (x=2;x<=nprimo/2;x++)
+			{// este bucle mira los divisores
+				if (nprimo%x==0)
+				{
+					cdiv++;
+					x=nprimo;
+				}
 			}
-		}
-		if(a!=2){
-			System.out.println("");
-		}
-		
-		
-		/*for(i=1; i<(n+1);i++){
-			if(n%i==0){
-				a++;
+			if (cdiv==0)// si los divisiores son cero ya lo hemos encontrado
+			{
+				esprimo=true;
+				System.out.println("El primo cercano es: "+nprimo);
 			}
-		}
-		if(a!=2){
-			System.out.println("No es primo");
-			}else{
-				System.out.println("Sí es primo");
-		}*/
+			
+			else
+				esprimo=false;
+
+			nprimo++;
+		}while (esprimo==false);// el bucle se hace hasta que esprimno sea true
 	}
 
 }

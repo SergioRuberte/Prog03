@@ -5,25 +5,19 @@ public class CantidadPrimos {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner (System.in);
-		int a=0, i, n, numprimos=0;
+		int a=0, i, n, numprimos=0, contador=0;
 		System.out.println("Ingrese número:");
 		n=teclado.nextInt();
 		for(int u=1;u<n;u++){
-			System.out.println(u);
-			for(i=1; i<(u+1);i++){
-				if(u%i==0){
-					a++;
+			contador=0;
+				if(u%n==0){
+					contador++;
 				}
-				if(a==2){
-					numprimos++;
-					System.out.println("Primo");
-					System.out.println(i+" "+u);
-			}
-			}
-
-
+			if(contador==2){
+				System.out.println("es primo");
+				contador=0;
+				}
 		}
-		System.out.println(numprimos);
 	}
 
 }

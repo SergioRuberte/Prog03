@@ -17,7 +17,23 @@ public class MenúFiguras {
 			System.out.println("Introduzca la altura:");
 			altura=teclado.nextInt();
 			area=(base*altura)/2;
-			System.out.println(area);
+			System.out.println("Área: "+area);
+			break;
+		case 2:
+			System.out.println("Introduzca la base:");
+			base=teclado.nextInt();
+			System.out.println("Introduzca la altura:");
+			altura=teclado.nextInt();
+			area=base*altura;
+			System.out.println("Área: "+area);
+			break;
+		case 3:
+			System.out.println("Introduzca la base:");
+			base=teclado.nextInt();
+			System.out.println("Introduzca la altura:");
+			altura=teclado.nextInt();
+			area=base*altura;
+			System.out.println("Área: "+area);
 			break;
 		}
 		
