@@ -15,6 +15,7 @@ public class SumaSerieParImpar {
 			}
 			cont++;
 		}while (num!=0);
+		
 		System.out.println("La suma de los números impares es: "+sumaimpar);
 		System.out.println("La suma de los números pares es: "+sumapar);	
 	}
